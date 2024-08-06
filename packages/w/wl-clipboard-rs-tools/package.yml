@@ -1,0 +1,26 @@
+name       : wl-clipboard-rs-tools
+version    : 0.9.0
+release    : 1
+source     :
+    - https://github.com/YaLTeR/wl-clipboard-rs/archive/refs/tags/v0.9.0.tar.gz : b9f03f411a56dcdfb94ed256019226809d210e0621f719123590899ba5f8fbc3
+homepage   : https://github.com/YaLTeR/wl-clipboard-rs/tree/master/wl-clipboard-rs-tools
+networking : yes
+license    : 
+    - Apache-2.0
+    - MIT
+component  : system.utils
+summary    : Terminal utilities for accessing the Wayland clipboard, implemented using wl-clipboard-rs
+description: |
+    Terminal utilities for accessing the Wayland clipboard, implemented using wl-clipboard-rs providing wl-paste, wl-copy, and wl-clip
+builddeps  :
+    - pkgconfig(wayland-client)
+    - rust
+setup      : |
+    %cargo_fetch
+build      : |
+    cd wl-clipboard-rs-tools
+    %cargo_build
+install    : |
+    for p in wl-clip wl-copy wl-paste; do
+    %cargo_install ${p}
+    done

@@ -1,0 +1,38 @@
+<PISI>
+    <Source>
+        <Name>wl-clipboard-rs-tools</Name>
+        <Homepage>https://github.com/YaLTeR/wl-clipboard-rs/tree/master/wl-clipboard-rs-tools</Homepage>
+        <Packager>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
+        </Packager>
+        <License>Apache-2.0</License>
+        <License>MIT</License>
+        <PartOf>system.utils</PartOf>
+        <Summary xml:lang="en">Terminal utilities for accessing the Wayland clipboard, implemented using wl-clipboard-rs</Summary>
+        <Description xml:lang="en">Terminal utilities for accessing the Wayland clipboard, implemented using wl-clipboard-rs providing wl-paste, wl-copy, and wl-clip
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>wl-clipboard-rs-tools</Name>
+        <Summary xml:lang="en">Terminal utilities for accessing the Wayland clipboard, implemented using wl-clipboard-rs</Summary>
+        <Description xml:lang="en">Terminal utilities for accessing the Wayland clipboard, implemented using wl-clipboard-rs providing wl-paste, wl-copy, and wl-clip
+</Description>
+        <PartOf>system.utils</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/wl-clip</Path>
+            <Path fileType="executable">/usr/bin/wl-copy</Path>
+            <Path fileType="executable">/usr/bin/wl-paste</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2024-08-06</Date>
+            <Version>0.9.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
+        </Update>
+    </History>
+</PISI>
