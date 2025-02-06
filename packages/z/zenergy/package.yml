@@ -1,0 +1,21 @@
+name       : zenergy
+version    : 7c
+release    : 1
+source     :
+    - git|https://github.com/BoukeHaarsma23/zenergy : 7c4e83d5e2f887f4c31edaf92e5f94e9448e9764
+homepage   : https://github.com/BoukeHaarsma23/zenergy.git
+license    : GPL-2.0-only
+component  : kernel.drivers
+summary    : AMD Zen energy driver
+description: |
+    AMD Zen kernel driver for reading power consumtion using RAPL registers
+builddeps  :
+    - linux-current
+    - linux-current-headers
+# setup      : |
+#     %configure
+build      : |
+    %make
+install    : |
+    install -Dm00644 zenergy.ko -t $installdir%libdir%/modules/%kernel_version_current%/kernel/drivers/platform/x86/
+    find "$installdir" -name '*.ko' -exec strip --strip-debug {} \; -exec zstd {} \; -exec rm -v {} \;
