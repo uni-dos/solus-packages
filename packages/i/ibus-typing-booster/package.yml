@@ -1,0 +1,21 @@
+name       : ibus-typing-booster
+version    : 2.27.28
+release    : 1
+source     :
+    - https://github.com/mike-fabian/ibus-typing-booster/releases/download/2.27.28/ibus-typing-booster-2.27.28.tar.gz : 5bf0d0c76aaf6741040be0d04ca8d2c41854e293d619a87c0a68fcb0aa49a9fb
+homepage   : https://mike-fabian.github.io/ibus-typing-booster/
+license    : 
+    - Apache-2.0
+    - GPL-3.0-or-later
+component  : desktop.core
+summary    : ibus-typing-booster is a completion input method for faster typing 
+description: |
+    Get faster typing experience by intelligent context sensitive completion.
+builddeps  :
+    - pkgconfig(ibus-1.0)
+setup      : |
+    %configure
+build      : |
+    %make
+install    : |
+    %make_install
