@@ -10,8 +10,8 @@ summary    : ThorVG is an open-source graphics library designed for creating vec
 description: |
     Thor Vector Graphics is a lightweight portable library used for drawing vector-based scenes and animations including SVG and Lottie.
 builddeps  :
-    - pkgconfig(libpng)
     - pkgconfig(libjpeg)
+    - pkgconfig(libpng)
     - pkgconfig(opengl)
     - meson
 setup      : |
