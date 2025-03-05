@@ -1,0 +1,26 @@
+name       : thorvg
+version    : 0.15.10
+release    : 1
+source     :
+    - https://github.com/thorvg/thorvg/archive/refs/tags/v0.15.10.tar.gz : ea4bfda399364d0037b68b7bb50f78769d00cbe9d8ed743e05ae6c50d225c7cc
+homepage   : https://www.thorvg.org/
+license    : MIT
+component  : programming.library
+summary    : ThorVG is an open-source graphics library designed for creating vector-based scenes and animations.
+description: |
+    Thor Vector Graphics is a lightweight portable library used for drawing vector-based scenes and animations including SVG and Lottie.
+builddeps  :
+    - pkgconfig(libpng)
+    - pkgconfig(libjpeg)
+    - pkgconfig(opengl)
+    - meson
+setup      : |
+    %meson_configure \
+        -Dbindings=capi \
+        -Dengines=sw,gl \
+        -Dloaders=svg,png,jpg,ttf \
+        -Dsimd=true
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
