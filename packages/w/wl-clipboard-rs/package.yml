@@ -1,0 +1,40 @@
+name       : wl-clipboard-rs
+version    : 0.9.2
+release    : 1
+source     :
+    - https://github.com/YaLTeR/wl-clipboard-rs/archive/refs/tags/v0.9.2.tar.gz : bf85492a40008913eb6e76be9952c8ca959b20dd418e2086904b5fedceb4bac7
+homepage   : https://github.com/YaLTeR/wl-clipboard-rs
+license    : 
+    - Apache-2.0
+    - MIT
+component  : system.utils
+summary    : Terminal utilities for accessing the Wayland clipboard
+description: |
+    Terminal utilities for accessing the Wayland clipboard
+replaces   : 
+    - wl-clipboard
+builddeps  :
+    - pkgconfig(wayland-client)
+    - rust
+networking : yes
+setup      : |
+    pushd wl-clipboard-rs-tools
+        %cargo_fetch
+    popd
+build      : |
+    pushd wl-clipboard-rs-tools
+        %cargo_build --features native_lib
+    popd
+install    : |
+
+    install -Dm644 target/man/*.1 -t $installdir/usr/share/man/man1
+    
+    install -Dm644 target/completions/*.bash -t $installdir/usr/share/bash-completion/completions/
+    install -Dm644 target/completions/*.fish -t $installdir/usr/share/fish/vendor_completions.d/
+    install -Dm644 target/completions/_* -t $installdir/usr/share/zsh/site-functions/
+    
+    install -Dm755 target/release/wl-clip $installdir/usr/bin/wl-clip
+    install -Dm755 target/release/wl-copy $installdir/usr/bin/wl-copy
+    install -Dm755 target/release/wl-paste $installdir/usr/bin/wl-paste
+    
+   

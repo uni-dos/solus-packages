@@ -1,0 +1,49 @@
+<PISI>
+    <Source>
+        <Name>wl-clipboard-rs</Name>
+        <Homepage>https://github.com/YaLTeR/wl-clipboard-rs</Homepage>
+        <Packager>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
+        </Packager>
+        <License>Apache-2.0</License>
+        <License>MIT</License>
+        <PartOf>system.utils</PartOf>
+        <Summary xml:lang="en">Terminal utilities for accessing the Wayland clipboard</Summary>
+        <Description xml:lang="en">Terminal utilities for accessing the Wayland clipboard
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>wl-clipboard-rs</Name>
+        <Summary xml:lang="en">Terminal utilities for accessing the Wayland clipboard</Summary>
+        <Description xml:lang="en">Terminal utilities for accessing the Wayland clipboard
+</Description>
+        <PartOf>system.utils</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/wl-clip</Path>
+            <Path fileType="executable">/usr/bin/wl-copy</Path>
+            <Path fileType="executable">/usr/bin/wl-paste</Path>
+            <Path fileType="data">/usr/share/bash-completion/completions/wl-copy.bash</Path>
+            <Path fileType="data">/usr/share/bash-completion/completions/wl-paste.bash</Path>
+            <Path fileType="data">/usr/share/fish/vendor_completions.d/wl-copy.fish</Path>
+            <Path fileType="data">/usr/share/fish/vendor_completions.d/wl-paste.fish</Path>
+            <Path fileType="man">/usr/share/man/man1/wl-copy.1</Path>
+            <Path fileType="man">/usr/share/man/man1/wl-paste.1</Path>
+            <Path fileType="data">/usr/share/zsh/site-functions/_wl-copy</Path>
+            <Path fileType="data">/usr/share/zsh/site-functions/_wl-paste</Path>
+        </Files>
+        <Replaces>
+            <Package>wl-clipboard</Package>
+        </Replaces>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2025-04-18</Date>
+            <Version>0.9.2</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
+        </Update>
+    </History>
+</PISI>

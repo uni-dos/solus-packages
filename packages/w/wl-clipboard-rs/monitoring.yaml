@@ -1,0 +1,7 @@
+# Remove all comments before submitting, except CPE check date if none found
+releases:
+  id: 137683
+  rss: https://github.com/YaLTeR/wl-clipboard-rs/releases.atom
+# No known CPE, checked 2025-04-18
+security:
+  cpe: ~
