@@ -1,8 +1,8 @@
 name       : cef-minimal
-version    : 113.0.5672.128
-release    : 16
+version    : 138.0.7204.97
+release    : 17
 source     :
-    - https://cef-builds.spotifycdn.com/cef_binary_113.3.1+g525fa10+chromium-113.0.5672.128_linux64_minimal.tar.bz2 : 6a931098632d83c11893d316f992c51498ac6830bef0212cc7eb6c3f58c7b3f9
+    - https://cef-builds.spotifycdn.com/cef_binary_138.0.17+gac9b751+chromium-138.0.7204.97_linux64_minimal.tar.bz2 : dea80885e9fa97f931b6dcb0d33efc9e6c28c7adab8958659854863e4528b7b8
 homepage   : https://bitbucket.org/chromiumembedded/cef/src/master/
 license    : BSD-3-Clause
 component  : programming.library
