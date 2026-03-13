@@ -1,0 +1,9 @@
+libLLVM.so.20.1
+libc.so.6
+liblldCOFF.so.20.1
+liblldCommon.so.20.1
+liblldELF.so.20.1
+liblldMachO.so.20.1
+liblldWasm.so.20.1
+libm.so.6
+libstdc++.so.6
