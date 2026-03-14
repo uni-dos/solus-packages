@@ -3100,5 +3100,6 @@
 		<Package>python-shapely</Package>
 		<Package>python-uranium</Package>
 		<Package>fcitx-mozc</Package>
+		<Package>sqlite3-lemon</Package>
 	</Obsoletes>
 </PISI>

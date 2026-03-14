@@ -3,8 +3,8 @@
         <Name>sqlite3</Name>
         <Homepage>https://www.sqlite.org</Homepage>
         <Packager>
-            <Name>Evan Maddock</Name>
-            <Email>maddock.evan@vivaldi.net</Email>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
         </Packager>
         <License>Public-Domain</License>
         <PartOf>system.base</PartOf>
@@ -52,6 +52,19 @@
         </Files>
     </Package>
     <Package>
+        <Name>lemon-parser</Name>
+        <Summary xml:lang="en">A parser generator</Summary>
+        <Description xml:lang="en">The SQLite package is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine.</Description>
+        <PartOf>programming.tools</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/lemon</Path>
+            <Path fileType="data">/usr/share/lemon/lempar.c</Path>
+        </Files>
+        <Replaces>
+            <Package>sqlite3-lemon</Package>
+        </Replaces>
+    </Package>
+    <Package>
         <Name>sqlite3-devel</Name>
         <Summary xml:lang="en">Development files for sqlite3</Summary>
         <Description xml:lang="en">The SQLite package is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine.</Description>
@@ -66,23 +79,13 @@
             <Path fileType="data">/usr/lib64/pkgconfig/sqlite3.pc</Path>
         </Files>
     </Package>
-    <Package>
-        <Name>sqlite3-lemon</Name>
-        <Summary xml:lang="en">A parser generator</Summary>
-        <Description xml:lang="en">The Lemon program is an LALR(1) parser generator. It takes a context free grammar and converts it into a subroutine that will parse a file using that grammar.</Description>
-        <PartOf>programming.tools</PartOf>
-        <Files>
-            <Path fileType="executable">/usr/bin/lemon</Path>
-            <Path fileType="data">/usr/share/lemon/lempar.c</Path>
-        </Files>
-    </Package>
     <History>
         <Update release="64">
-            <Date>2025-09-06</Date>
+            <Date>2026-03-14</Date>
             <Version>3.50.4</Version>
             <Comment>Packaging update</Comment>
-            <Name>Evan Maddock</Name>
-            <Email>maddock.evan@vivaldi.net</Email>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
         </Update>
     </History>
 </PISI>

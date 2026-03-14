@@ -7,12 +7,12 @@ source     :
 license    : Public-Domain
 component  :
     - system.base
-    - lemon : programming.tools
+    - ^lemon-parser : programming.tools
 emul32     : true
 homepage   : https://www.sqlite.org
 summary    :
     - Self contained SQL package
-    - lemon : A parser generator
+    - ^lemon-parser : A parser generator
 description:
     - The SQLite package is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine.
     - lemon : The Lemon program is an LALR(1) parser generator. It takes a context free grammar and converts it into a subroutine that will parse a file using that grammar.
@@ -61,6 +61,9 @@ install    : |
     install -Dm00755 lemon $installdir/usr/bin
     popd
 patterns   :
-    - lemon :
+    - ^lemon-parser :
         - /usr/bin/lemon
         - /usr/share/lemon
+replaces    : 
+    - ^lemon-parser:
+        - sqlite3-lemon

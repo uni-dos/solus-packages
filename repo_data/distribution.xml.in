@@ -4254,5 +4254,8 @@
 		<!-- Removed in favor of Fcitx5 support -->
 		<Package>fcitx-mozc</Package>
 
+		<!-- Renamed to lemon-parser -->
+		<Package>sqlite3-lemon</Package>
+
 	</Obsoletes>
 </PISI>
