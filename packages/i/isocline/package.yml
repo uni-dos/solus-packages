@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : isocline
+version    : 1.1.0
+release    : 1
+source     :
+    - https://github.com/daanx/isocline/archive/refs/tags/v1.1.0.tar.gz : 1e5f0efa2b719c3e1d292f501e5329e141a039deefc801099f8bbb9a50255531
+homepage   : https://github.com/daanx/isocline
+license    : MIT
+component  : programming.library
+summary    : Isocline is a portable GNU readline alternative 
+description: |
+    Isocline is a pure C library that can be used as an alternative to the GNU readline library
+clang      : true
+setup      : |
+    %patch -p1 -i $pkgfiles/version-fix.patch
+    %cmake_ninja -DIC_BUILD_TESTS=OFF
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+    %install_license LICENSE
+    # remove the static library
+    rm -v $installdir/usr/lib64/libisocline.a

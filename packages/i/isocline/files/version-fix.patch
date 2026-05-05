@@ -1,0 +1,38 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 11aff09..6b944d8 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -171,7 +171,7 @@ endif()
+ add_library(isocline_shared SHARED ${ic_sources})
+ set_target_properties(isocline_shared PROPERTIES
+     OUTPUT_NAME isocline
+-    VERSION 1.0.9
++    VERSION 1.1.0
+     SOVERSION 1
+ )
+ target_compile_options(isocline_shared PRIVATE ${ic_cflags})
+diff --git a/isocline.pc.in b/isocline.pc.in
+index 9b34c9d..f1b53ff 100644
+--- a/isocline.pc.in
++++ b/isocline.pc.in
+@@ -5,6 +5,6 @@ includedir=${prefix}/@CMAKE_INSTALL_INCLUDEDIR@
+ 
+ Name: isocline
+ Description: Portable alternative to GNU Readline
+-Version: 1.0.9
++Version: 1.1.0
+ Libs: -L${libdir} -lisocline
+ Cflags: -I${includedir}
+diff --git a/src/isocline.c b/src/isocline.c
+index 8b6055c..a55413c 100644
+--- a/src/isocline.c
++++ b/src/isocline.c
+@@ -578,7 +578,7 @@ ic_private ic_env_t* ic_get_env(void) {
+   return rpenv;
+ }
+ 
+-ic_public void ic_init_custom_malloc( ic_malloc_fun_t* _malloc, ic_realloc_fun_t* _realloc, ic_free_fun_t* _free ) {
++ic_public void ic_init_custom_alloc( ic_malloc_fun_t* _malloc, ic_realloc_fun_t* _realloc, ic_free_fun_t* _free ) {
+   assert(rpenv == NULL);
+   if (rpenv != NULL) {
+     ic_env_free(rpenv);    
