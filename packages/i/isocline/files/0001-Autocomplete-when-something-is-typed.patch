@@ -1,0 +1,25 @@
+From 0bf4c481c1271a9790684e8b414ca59849cbd470 Mon Sep 17 00:00:00 2001
+From: uni-dos <uni.dos12@outlook.com>
+Date: Tue, 12 May 2026 16:07:50 -0700
+Subject: [PATCH] Autocomplete when something is typed
+
+---
+ src/editline_completion.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/editline_completion.c b/src/editline_completion.c
+index 10c8ec0..bae9033 100644
+--- a/src/editline_completion.c
++++ b/src/editline_completion.c
+@@ -266,7 +266,7 @@ again:
+ 
+ static void edit_generate_completions(ic_env_t* env, editor_t* eb, bool autotab) {
+   debug_msg( "edit: complete: %zd: %s\n", eb->pos, sbuf_string(eb->input) );
+-  if (eb->pos < 0) return;
++  if (eb->pos <= 0) return;
+   ssize_t count = completions_generate(env, env->completions, sbuf_string(eb->input), eb->pos, IC_MAX_COMPLETIONS_TO_TRY);
+   bool more_available = (count >= IC_MAX_COMPLETIONS_TO_TRY);
+   if (count <= 0) {
+-- 
+2.54.0
+
