@@ -14,6 +14,7 @@ clang      : true
 setup      : |
     %patch -p1 -i $pkgfiles/version-fix.patch
     %patch -p1 -i $pkgfiles/0001-Autocomplete-when-something-is-typed.patch
+    %patch -p1 -i $pkgfiles/0001-Use-for-windows-separator-and-on-unix-like-systems.patch
     %cmake_ninja -DIC_BUILD_TESTS=OFF
 build      : |
     %ninja_build

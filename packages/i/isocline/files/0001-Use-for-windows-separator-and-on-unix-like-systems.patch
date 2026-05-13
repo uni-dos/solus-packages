@@ -1,0 +1,31 @@
+From 4b54932ff3fab64535f4f336a4bebf6c2819defd Mon Sep 17 00:00:00 2001
+From: uni-dos <uni.dos12@outlook.com>
+Date: Wed, 13 May 2026 10:11:24 -0700
+Subject: [PATCH] Use ; for windows separator and : on unix like systems
+
+---
+ src/completers.c | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+diff --git a/src/completers.c b/src/completers.c
+index d66ed57..2392c67 100644
+--- a/src/completers.c
++++ b/src/completers.c
+@@ -642,7 +642,13 @@ static void filename_completer( ic_completion_env_t* cenv, const char* prefix )
+       while ( root != NULL ) {
+         // create full root in `root_dir`
+         sbuf_clear(root_dir);
+-        next = strchr(root,';');
++        char separator;
++        #ifdef _WIN32
++        separator = ';';
++        #else
++        separator = ':';
++        #endif
++        next = strchr(root,separator);
+         if (next == NULL) {
+           sbuf_append( root_dir, root );
+           root = NULL;
+-- 
+2.54.0
+
