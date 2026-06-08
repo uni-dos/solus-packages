@@ -1,0 +1,8 @@
+releases:
+  id: 13818
+  rss: ~ # For example https://github.com/PyO3/maturin/releases.atom
+# Verify successful cpe hits by visiting https://cve.circl.lu/search?vendor=$VENDOR&product=$PRODUCT
+security:
+  cpe:
+  - vendor: toybox_project
+    product: toybox

@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : toybox
+version    : 0.8.14
+release    : 1
+source     :
+    - https://landley.net/toybox/downloads/toybox-0.8.14.tar.gz : 827e4cdfd69f5da973e00e2a59b30b3c9857fb7fae74c362fd0b4f96be7929b0
+homepage   : https://landley.net/toybox/
+license    : 0BSD
+component  : system.boot
+summary    : Common Linux command line utilities together into a single BSD-licensed executable.
+description: |
+    Toybox combines many common Linux command line utilities together into a single BSD-licensed executable. It's simple, small, fast, and reasonably standards-compliant (POSIX-2008 and LSB 4.1).
+setup      : |
+    %configure
+build      : |
+    %make
+install    : |
+    install -Dm00755 toybox $installdir/usr/bin/toybox
