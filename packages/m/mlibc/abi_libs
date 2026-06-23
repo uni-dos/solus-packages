@@ -1,0 +1,10 @@
+ld.so
+libc.so
+libdl.so
+libm.so
+libpthread.so
+libresolv.so
+librt.so
+libssp.so
+libssp_nonshared.so
+libutil.so

@@ -1,0 +1,344 @@
+<PISI>
+    <Source>
+        <Name>mlibc</Name>
+        <Homepage>https://github.com/managarm/mlibc</Homepage>
+        <Packager>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <PartOf>programming.library</PartOf>
+        <Summary xml:lang="en">Portable C standard library</Summary>
+        <Description xml:lang="en">mlibc is a fully featured C standard library designed with portability in mind.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>mlibc</Name>
+        <Summary xml:lang="en">Portable C standard library</Summary>
+        <Description xml:lang="en">mlibc is a fully featured C standard library designed with portability in mind.
+</Description>
+        <PartOf>programming.library</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib64/mlibc/Scrt1.o</Path>
+            <Path fileType="library">/usr/lib64/mlibc/crt1.o</Path>
+            <Path fileType="library">/usr/lib64/mlibc/crti.o</Path>
+            <Path fileType="library">/usr/lib64/mlibc/crtn.o</Path>
+            <Path fileType="library">/usr/lib64/mlibc/ld.so</Path>
+            <Path fileType="library">/usr/lib64/mlibc/libc.so</Path>
+            <Path fileType="library">/usr/lib64/mlibc/libdl.so</Path>
+            <Path fileType="library">/usr/lib64/mlibc/libm.so</Path>
+            <Path fileType="library">/usr/lib64/mlibc/libpthread.so</Path>
+            <Path fileType="library">/usr/lib64/mlibc/libresolv.so</Path>
+            <Path fileType="library">/usr/lib64/mlibc/librt.so</Path>
+            <Path fileType="library">/usr/lib64/mlibc/libssp.so</Path>
+            <Path fileType="library">/usr/lib64/mlibc/libssp_nonshared.so</Path>
+            <Path fileType="library">/usr/lib64/mlibc/libutil.so</Path>
+            <Path fileType="library">/usr/lib64/mlibc/mlibc-gcc.specs</Path>
+            <Path fileType="data">/usr/share/licenses/mlibc/LICENSE</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>mlibc-devel</Name>
+        <Summary xml:lang="en">Development files for mlibc</Summary>
+        <Description xml:lang="en">mlibc is a fully featured C standard library designed with portability in mind.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="1">mlibc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/mlibc-gcc</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/access.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/auxv.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/blkcnt_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/blksize_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/clockid_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/dev_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/epoll.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/errno.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/fcntl.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/fsblkcnt_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/fsfilcnt_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/gid_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/in.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/ino_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/inotify.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/ioctls.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/ipc.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/limits.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/mode_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/mqueue.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/msg.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/nlink_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/packet.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/pid_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/poll.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/ptrace.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/random.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/reboot.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/resource.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/rlim_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/seek-whence.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/shm.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/sigevent.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/signal.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/sigval.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/socket.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/socklen_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/stat.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/statfs.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/statvfs.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/statx.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/suseconds_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/termios.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/time.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/uid_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/utmp-defines.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/utmpx.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/utsname.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/vm-flags.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/vt.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/wait.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/xattr.h</Path>
+            <Path fileType="header">/usr/include/mlibc/alloca.h</Path>
+            <Path fileType="header">/usr/include/mlibc/ar.h</Path>
+            <Path fileType="header">/usr/include/mlibc/arpa/inet.h</Path>
+            <Path fileType="header">/usr/include/mlibc/arpa/nameser.h</Path>
+            <Path fileType="header">/usr/include/mlibc/arpa/nameser_compat.h</Path>
+            <Path fileType="header">/usr/include/mlibc/assert.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/ansi/fenv.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/ansi/time_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/ansi/timespec.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/bsd/bsd_stdlib.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/bsd/bsd_unistd.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/cpu_set.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/ensure.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/ether_addr.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/file.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/getopt.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/glibc/glibc_assert.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/glibc/glibc_icmp6.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/glibc/glibc_malloc.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/glibc/glibc_search.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/glibc/glibc_signal.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/glibc/glibc_stdlib.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/inline-definition.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/linux/cpu_set.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/linux/linux_sched.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/linux/linux_stat.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/linux/linux_uio.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/linux/linux_unistd.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/linux/linux_utmp.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/machine.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/mbstate.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/nl_item.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/null.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/off_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/posix/fd_set.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/posix/id_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/posix/in_addr_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/posix/in_port_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/posix/iovec.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/posix/locale_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/posix/posix_ctype.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/posix/posix_locale.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/posix/posix_signal.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/posix/posix_stdio.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/posix/posix_stdlib.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/posix/posix_string.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/posix/posix_time.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/posix/posix_wctype.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/posix/pthread_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/posix/stat.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/posix/timer_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/posix/timeval.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/search.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/sigset_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/size_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/ssize_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/syscall.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/syscall_aliases.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/threads.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/types.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/wchar.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/wchar_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/wctrans_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/wctype_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/winsize.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/wint_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/byteswap.h</Path>
+            <Path fileType="header">/usr/include/mlibc/complex.h</Path>
+            <Path fileType="header">/usr/include/mlibc/ctype.h</Path>
+            <Path fileType="header">/usr/include/mlibc/dirent.h</Path>
+            <Path fileType="header">/usr/include/mlibc/dlfcn.h</Path>
+            <Path fileType="header">/usr/include/mlibc/elf.h</Path>
+            <Path fileType="header">/usr/include/mlibc/endian.h</Path>
+            <Path fileType="header">/usr/include/mlibc/err.h</Path>
+            <Path fileType="header">/usr/include/mlibc/errno.h</Path>
+            <Path fileType="header">/usr/include/mlibc/error.h</Path>
+            <Path fileType="header">/usr/include/mlibc/execinfo.h</Path>
+            <Path fileType="header">/usr/include/mlibc/fcntl.h</Path>
+            <Path fileType="header">/usr/include/mlibc/features.h</Path>
+            <Path fileType="header">/usr/include/mlibc/fenv.h</Path>
+            <Path fileType="header">/usr/include/mlibc/fnmatch.h</Path>
+            <Path fileType="header">/usr/include/mlibc/fstab.h</Path>
+            <Path fileType="header">/usr/include/mlibc/ftw.h</Path>
+            <Path fileType="header">/usr/include/mlibc/getopt.h</Path>
+            <Path fileType="header">/usr/include/mlibc/glob.h</Path>
+            <Path fileType="header">/usr/include/mlibc/grp.h</Path>
+            <Path fileType="header">/usr/include/mlibc/gshadow.h</Path>
+            <Path fileType="header">/usr/include/mlibc/ifaddrs.h</Path>
+            <Path fileType="header">/usr/include/mlibc/inttypes.h</Path>
+            <Path fileType="header">/usr/include/mlibc/langinfo.h</Path>
+            <Path fileType="header">/usr/include/mlibc/lastlog.h</Path>
+            <Path fileType="header">/usr/include/mlibc/libgen.h</Path>
+            <Path fileType="header">/usr/include/mlibc/limits.h</Path>
+            <Path fileType="header">/usr/include/mlibc/link.h</Path>
+            <Path fileType="header">/usr/include/mlibc/locale.h</Path>
+            <Path fileType="header">/usr/include/mlibc/malloc.h</Path>
+            <Path fileType="header">/usr/include/mlibc/math.h</Path>
+            <Path fileType="header">/usr/include/mlibc/memory.h</Path>
+            <Path fileType="header">/usr/include/mlibc/mlibc-config.h</Path>
+            <Path fileType="header">/usr/include/mlibc/mntent.h</Path>
+            <Path fileType="header">/usr/include/mlibc/module.h</Path>
+            <Path fileType="header">/usr/include/mlibc/mqueue.h</Path>
+            <Path fileType="header">/usr/include/mlibc/net/ethernet.h</Path>
+            <Path fileType="header">/usr/include/mlibc/net/if.h</Path>
+            <Path fileType="header">/usr/include/mlibc/net/if_arp.h</Path>
+            <Path fileType="header">/usr/include/mlibc/net/if_ppp.h</Path>
+            <Path fileType="header">/usr/include/mlibc/net/route.h</Path>
+            <Path fileType="header">/usr/include/mlibc/netax25/ax25.h</Path>
+            <Path fileType="header">/usr/include/mlibc/netdb.h</Path>
+            <Path fileType="header">/usr/include/mlibc/netinet/ether.h</Path>
+            <Path fileType="header">/usr/include/mlibc/netinet/icmp6.h</Path>
+            <Path fileType="header">/usr/include/mlibc/netinet/if_ether.h</Path>
+            <Path fileType="header">/usr/include/mlibc/netinet/in.h</Path>
+            <Path fileType="header">/usr/include/mlibc/netinet/in_systm.h</Path>
+            <Path fileType="header">/usr/include/mlibc/netinet/ip.h</Path>
+            <Path fileType="header">/usr/include/mlibc/netinet/ip6.h</Path>
+            <Path fileType="header">/usr/include/mlibc/netinet/ip_icmp.h</Path>
+            <Path fileType="header">/usr/include/mlibc/netinet/tcp.h</Path>
+            <Path fileType="header">/usr/include/mlibc/netinet/udp.h</Path>
+            <Path fileType="header">/usr/include/mlibc/netipx/ipx.h</Path>
+            <Path fileType="header">/usr/include/mlibc/netpacket/packet.h</Path>
+            <Path fileType="header">/usr/include/mlibc/netrom/netrom.h</Path>
+            <Path fileType="header">/usr/include/mlibc/nl_types.h</Path>
+            <Path fileType="header">/usr/include/mlibc/paths.h</Path>
+            <Path fileType="header">/usr/include/mlibc/poll.h</Path>
+            <Path fileType="header">/usr/include/mlibc/printf.h</Path>
+            <Path fileType="header">/usr/include/mlibc/pthread.h</Path>
+            <Path fileType="header">/usr/include/mlibc/pty.h</Path>
+            <Path fileType="header">/usr/include/mlibc/pwd.h</Path>
+            <Path fileType="header">/usr/include/mlibc/regex.h</Path>
+            <Path fileType="header">/usr/include/mlibc/resolv.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sched.h</Path>
+            <Path fileType="header">/usr/include/mlibc/scsi/scsi.h</Path>
+            <Path fileType="header">/usr/include/mlibc/scsi/scsi_ioctl.h</Path>
+            <Path fileType="header">/usr/include/mlibc/scsi/sg.h</Path>
+            <Path fileType="header">/usr/include/mlibc/search.h</Path>
+            <Path fileType="header">/usr/include/mlibc/semaphore.h</Path>
+            <Path fileType="header">/usr/include/mlibc/setjmp.h</Path>
+            <Path fileType="header">/usr/include/mlibc/shadow.h</Path>
+            <Path fileType="header">/usr/include/mlibc/signal.h</Path>
+            <Path fileType="header">/usr/include/mlibc/spawn.h</Path>
+            <Path fileType="header">/usr/include/mlibc/stdc-predef.h</Path>
+            <Path fileType="header">/usr/include/mlibc/stdint.h</Path>
+            <Path fileType="header">/usr/include/mlibc/stdio.h</Path>
+            <Path fileType="header">/usr/include/mlibc/stdio_ext.h</Path>
+            <Path fileType="header">/usr/include/mlibc/stdlib.h</Path>
+            <Path fileType="header">/usr/include/mlibc/string.h</Path>
+            <Path fileType="header">/usr/include/mlibc/strings.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/auxv.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/cachectl.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/dir.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/endian.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/epoll.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/errno.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/eventfd.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/fcntl.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/file.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/fsuid.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/inotify.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/io.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/ioctl.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/ipc.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/kd.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/klog.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/mman.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/mount.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/msg.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/mtio.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/param.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/personality.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/pidfd.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/poll.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/prctl.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/procfs.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/ptrace.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/queue.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/quota.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/random.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/reboot.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/reg.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/resource.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/select.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/sem.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/sendfile.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/shm.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/signal.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/signalfd.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/socket.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/stat.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/statfs.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/statvfs.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/swap.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/syscall.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/sysinfo.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/syslog.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/sysmacros.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/termios.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/time.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/timeb.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/timerfd.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/times.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/timex.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/ttydefaults.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/types.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/ucontext.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/uio.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/un.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/user.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/utsname.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/vfs.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/vt.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/wait.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sys/xattr.h</Path>
+            <Path fileType="header">/usr/include/mlibc/syscall.h</Path>
+            <Path fileType="header">/usr/include/mlibc/sysexits.h</Path>
+            <Path fileType="header">/usr/include/mlibc/syslog.h</Path>
+            <Path fileType="header">/usr/include/mlibc/termios.h</Path>
+            <Path fileType="header">/usr/include/mlibc/threads.h</Path>
+            <Path fileType="header">/usr/include/mlibc/time.h</Path>
+            <Path fileType="header">/usr/include/mlibc/uchar.h</Path>
+            <Path fileType="header">/usr/include/mlibc/ucontext.h</Path>
+            <Path fileType="header">/usr/include/mlibc/unistd.h</Path>
+            <Path fileType="header">/usr/include/mlibc/utime.h</Path>
+            <Path fileType="header">/usr/include/mlibc/utmp.h</Path>
+            <Path fileType="header">/usr/include/mlibc/utmpx.h</Path>
+            <Path fileType="header">/usr/include/mlibc/values.h</Path>
+            <Path fileType="header">/usr/include/mlibc/wchar.h</Path>
+            <Path fileType="header">/usr/include/mlibc/wctype.h</Path>
+            <Path fileType="header">/usr/include/mlibc/wordexp.h</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2026-07-09</Date>
+            <Version>6.3.1</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
+        </Update>
+    </History>
+</PISI>
