@@ -1,0 +1,344 @@
+<PISI>
+    <Source>
+        <Name>mlibc</Name>
+        <Homepage>https://github.com/managarm/mlibc</Homepage>
+        <Packager>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <PartOf>programming.library</PartOf>
+        <Summary xml:lang="en">Portable C standard library</Summary>
+        <Description xml:lang="en">mlibc is a fully featured C standard library designed with portability in mind.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>mlibc</Name>
+        <Summary xml:lang="en">Portable C standard library</Summary>
+        <Description xml:lang="en">mlibc is a fully featured C standard library designed with portability in mind.
+</Description>
+        <PartOf>programming.library</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib64/mlibc/Scrt1.o</Path>
+            <Path fileType="library">/usr/lib64/mlibc/crt1.o</Path>
+            <Path fileType="library">/usr/lib64/mlibc/crti.o</Path>
+            <Path fileType="library">/usr/lib64/mlibc/crtn.o</Path>
+            <Path fileType="library">/usr/lib64/mlibc/libc.so</Path>
+            <Path fileType="library">/usr/lib64/mlibc/libdl.so</Path>
+            <Path fileType="library">/usr/lib64/mlibc/libm.so</Path>
+            <Path fileType="library">/usr/lib64/mlibc/libpthread.so</Path>
+            <Path fileType="library">/usr/lib64/mlibc/libresolv.so</Path>
+            <Path fileType="library">/usr/lib64/mlibc/librt.so</Path>
+            <Path fileType="library">/usr/lib64/mlibc/libssp.so</Path>
+            <Path fileType="library">/usr/lib64/mlibc/libssp_nonshared.so</Path>
+            <Path fileType="library">/usr/lib64/mlibc/libutil.so</Path>
+            <Path fileType="library">/usr/lib64/mlibc/mlibc-gcc.specs</Path>
+            <Path fileType="library">/usr/lib64/mlibc/mold.so</Path>
+            <Path fileType="data">/usr/share/licenses/mlibc/LICENSE</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>mlibc-devel</Name>
+        <Summary xml:lang="en">Development files for mlibc</Summary>
+        <Description xml:lang="en">mlibc is a fully featured C standard library designed with portability in mind.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="1">mlibc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/mlibc-gcc</Path>
+            <Path fileType="header">/usr/include/abi-bits/access.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/auxv.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/blkcnt_t.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/blksize_t.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/clockid_t.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/dev_t.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/epoll.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/errno.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/fcntl.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/fsblkcnt_t.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/fsfilcnt_t.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/gid_t.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/in.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/ino_t.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/inotify.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/ioctls.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/ipc.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/limits.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/mode_t.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/mqueue.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/msg.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/nlink_t.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/packet.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/pid_t.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/poll.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/ptrace.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/random.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/reboot.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/resource.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/rlim_t.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/seek-whence.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/shm.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/sigevent.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/signal.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/sigval.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/socket.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/socklen_t.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/stat.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/statfs.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/statvfs.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/statx.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/suseconds_t.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/termios.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/time.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/uid_t.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/utmp-defines.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/utmpx.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/utsname.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/vm-flags.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/vt.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/wait.h</Path>
+            <Path fileType="header">/usr/include/abi-bits/xattr.h</Path>
+            <Path fileType="header">/usr/include/alloca.h</Path>
+            <Path fileType="header">/usr/include/ar.h</Path>
+            <Path fileType="header">/usr/include/arpa/inet.h</Path>
+            <Path fileType="header">/usr/include/arpa/nameser.h</Path>
+            <Path fileType="header">/usr/include/arpa/nameser_compat.h</Path>
+            <Path fileType="header">/usr/include/assert.h</Path>
+            <Path fileType="header">/usr/include/bits/ansi/fenv.h</Path>
+            <Path fileType="header">/usr/include/bits/ansi/time_t.h</Path>
+            <Path fileType="header">/usr/include/bits/ansi/timespec.h</Path>
+            <Path fileType="header">/usr/include/bits/bsd/bsd_stdlib.h</Path>
+            <Path fileType="header">/usr/include/bits/bsd/bsd_unistd.h</Path>
+            <Path fileType="header">/usr/include/bits/cpu_set.h</Path>
+            <Path fileType="header">/usr/include/bits/ensure.h</Path>
+            <Path fileType="header">/usr/include/bits/ether_addr.h</Path>
+            <Path fileType="header">/usr/include/bits/file.h</Path>
+            <Path fileType="header">/usr/include/bits/getopt.h</Path>
+            <Path fileType="header">/usr/include/bits/glibc/glibc_assert.h</Path>
+            <Path fileType="header">/usr/include/bits/glibc/glibc_icmp6.h</Path>
+            <Path fileType="header">/usr/include/bits/glibc/glibc_malloc.h</Path>
+            <Path fileType="header">/usr/include/bits/glibc/glibc_search.h</Path>
+            <Path fileType="header">/usr/include/bits/glibc/glibc_signal.h</Path>
+            <Path fileType="header">/usr/include/bits/glibc/glibc_stdlib.h</Path>
+            <Path fileType="header">/usr/include/bits/inline-definition.h</Path>
+            <Path fileType="header">/usr/include/bits/linux/cpu_set.h</Path>
+            <Path fileType="header">/usr/include/bits/linux/linux_sched.h</Path>
+            <Path fileType="header">/usr/include/bits/linux/linux_stat.h</Path>
+            <Path fileType="header">/usr/include/bits/linux/linux_uio.h</Path>
+            <Path fileType="header">/usr/include/bits/linux/linux_unistd.h</Path>
+            <Path fileType="header">/usr/include/bits/linux/linux_utmp.h</Path>
+            <Path fileType="header">/usr/include/bits/machine.h</Path>
+            <Path fileType="header">/usr/include/bits/mbstate.h</Path>
+            <Path fileType="header">/usr/include/bits/nl_item.h</Path>
+            <Path fileType="header">/usr/include/bits/null.h</Path>
+            <Path fileType="header">/usr/include/bits/off_t.h</Path>
+            <Path fileType="header">/usr/include/bits/posix/fd_set.h</Path>
+            <Path fileType="header">/usr/include/bits/posix/id_t.h</Path>
+            <Path fileType="header">/usr/include/bits/posix/in_addr_t.h</Path>
+            <Path fileType="header">/usr/include/bits/posix/in_port_t.h</Path>
+            <Path fileType="header">/usr/include/bits/posix/iovec.h</Path>
+            <Path fileType="header">/usr/include/bits/posix/locale_t.h</Path>
+            <Path fileType="header">/usr/include/bits/posix/posix_ctype.h</Path>
+            <Path fileType="header">/usr/include/bits/posix/posix_locale.h</Path>
+            <Path fileType="header">/usr/include/bits/posix/posix_signal.h</Path>
+            <Path fileType="header">/usr/include/bits/posix/posix_stdio.h</Path>
+            <Path fileType="header">/usr/include/bits/posix/posix_stdlib.h</Path>
+            <Path fileType="header">/usr/include/bits/posix/posix_string.h</Path>
+            <Path fileType="header">/usr/include/bits/posix/posix_time.h</Path>
+            <Path fileType="header">/usr/include/bits/posix/posix_wctype.h</Path>
+            <Path fileType="header">/usr/include/bits/posix/pthread_t.h</Path>
+            <Path fileType="header">/usr/include/bits/posix/stat.h</Path>
+            <Path fileType="header">/usr/include/bits/posix/timer_t.h</Path>
+            <Path fileType="header">/usr/include/bits/posix/timeval.h</Path>
+            <Path fileType="header">/usr/include/bits/search.h</Path>
+            <Path fileType="header">/usr/include/bits/sigset_t.h</Path>
+            <Path fileType="header">/usr/include/bits/size_t.h</Path>
+            <Path fileType="header">/usr/include/bits/ssize_t.h</Path>
+            <Path fileType="header">/usr/include/bits/syscall.h</Path>
+            <Path fileType="header">/usr/include/bits/syscall_aliases.h</Path>
+            <Path fileType="header">/usr/include/bits/threads.h</Path>
+            <Path fileType="header">/usr/include/bits/types.h</Path>
+            <Path fileType="header">/usr/include/bits/wchar.h</Path>
+            <Path fileType="header">/usr/include/bits/wchar_t.h</Path>
+            <Path fileType="header">/usr/include/bits/wctrans_t.h</Path>
+            <Path fileType="header">/usr/include/bits/wctype_t.h</Path>
+            <Path fileType="header">/usr/include/bits/winsize.h</Path>
+            <Path fileType="header">/usr/include/bits/wint_t.h</Path>
+            <Path fileType="header">/usr/include/byteswap.h</Path>
+            <Path fileType="header">/usr/include/complex.h</Path>
+            <Path fileType="header">/usr/include/ctype.h</Path>
+            <Path fileType="header">/usr/include/dirent.h</Path>
+            <Path fileType="header">/usr/include/dlfcn.h</Path>
+            <Path fileType="header">/usr/include/elf.h</Path>
+            <Path fileType="header">/usr/include/endian.h</Path>
+            <Path fileType="header">/usr/include/err.h</Path>
+            <Path fileType="header">/usr/include/errno.h</Path>
+            <Path fileType="header">/usr/include/error.h</Path>
+            <Path fileType="header">/usr/include/execinfo.h</Path>
+            <Path fileType="header">/usr/include/fcntl.h</Path>
+            <Path fileType="header">/usr/include/features.h</Path>
+            <Path fileType="header">/usr/include/fenv.h</Path>
+            <Path fileType="header">/usr/include/fnmatch.h</Path>
+            <Path fileType="header">/usr/include/fstab.h</Path>
+            <Path fileType="header">/usr/include/ftw.h</Path>
+            <Path fileType="header">/usr/include/getopt.h</Path>
+            <Path fileType="header">/usr/include/glob.h</Path>
+            <Path fileType="header">/usr/include/grp.h</Path>
+            <Path fileType="header">/usr/include/gshadow.h</Path>
+            <Path fileType="header">/usr/include/ifaddrs.h</Path>
+            <Path fileType="header">/usr/include/inttypes.h</Path>
+            <Path fileType="header">/usr/include/langinfo.h</Path>
+            <Path fileType="header">/usr/include/lastlog.h</Path>
+            <Path fileType="header">/usr/include/libgen.h</Path>
+            <Path fileType="header">/usr/include/limits.h</Path>
+            <Path fileType="header">/usr/include/link.h</Path>
+            <Path fileType="header">/usr/include/locale.h</Path>
+            <Path fileType="header">/usr/include/malloc.h</Path>
+            <Path fileType="header">/usr/include/math.h</Path>
+            <Path fileType="header">/usr/include/memory.h</Path>
+            <Path fileType="header">/usr/include/mlibc-config.h</Path>
+            <Path fileType="header">/usr/include/mntent.h</Path>
+            <Path fileType="header">/usr/include/module.h</Path>
+            <Path fileType="header">/usr/include/mqueue.h</Path>
+            <Path fileType="header">/usr/include/net/ethernet.h</Path>
+            <Path fileType="header">/usr/include/net/if.h</Path>
+            <Path fileType="header">/usr/include/net/if_arp.h</Path>
+            <Path fileType="header">/usr/include/net/if_ppp.h</Path>
+            <Path fileType="header">/usr/include/net/route.h</Path>
+            <Path fileType="header">/usr/include/netax25/ax25.h</Path>
+            <Path fileType="header">/usr/include/netdb.h</Path>
+            <Path fileType="header">/usr/include/netinet/ether.h</Path>
+            <Path fileType="header">/usr/include/netinet/icmp6.h</Path>
+            <Path fileType="header">/usr/include/netinet/if_ether.h</Path>
+            <Path fileType="header">/usr/include/netinet/in.h</Path>
+            <Path fileType="header">/usr/include/netinet/in_systm.h</Path>
+            <Path fileType="header">/usr/include/netinet/ip.h</Path>
+            <Path fileType="header">/usr/include/netinet/ip6.h</Path>
+            <Path fileType="header">/usr/include/netinet/ip_icmp.h</Path>
+            <Path fileType="header">/usr/include/netinet/tcp.h</Path>
+            <Path fileType="header">/usr/include/netinet/udp.h</Path>
+            <Path fileType="header">/usr/include/netipx/ipx.h</Path>
+            <Path fileType="header">/usr/include/netpacket/packet.h</Path>
+            <Path fileType="header">/usr/include/netrom/netrom.h</Path>
+            <Path fileType="header">/usr/include/nl_types.h</Path>
+            <Path fileType="header">/usr/include/paths.h</Path>
+            <Path fileType="header">/usr/include/poll.h</Path>
+            <Path fileType="header">/usr/include/printf.h</Path>
+            <Path fileType="header">/usr/include/pthread.h</Path>
+            <Path fileType="header">/usr/include/pty.h</Path>
+            <Path fileType="header">/usr/include/pwd.h</Path>
+            <Path fileType="header">/usr/include/regex.h</Path>
+            <Path fileType="header">/usr/include/resolv.h</Path>
+            <Path fileType="header">/usr/include/sched.h</Path>
+            <Path fileType="header">/usr/include/scsi/scsi.h</Path>
+            <Path fileType="header">/usr/include/scsi/scsi_ioctl.h</Path>
+            <Path fileType="header">/usr/include/scsi/sg.h</Path>
+            <Path fileType="header">/usr/include/search.h</Path>
+            <Path fileType="header">/usr/include/semaphore.h</Path>
+            <Path fileType="header">/usr/include/setjmp.h</Path>
+            <Path fileType="header">/usr/include/shadow.h</Path>
+            <Path fileType="header">/usr/include/signal.h</Path>
+            <Path fileType="header">/usr/include/spawn.h</Path>
+            <Path fileType="header">/usr/include/stdc-predef.h</Path>
+            <Path fileType="header">/usr/include/stdint.h</Path>
+            <Path fileType="header">/usr/include/stdio.h</Path>
+            <Path fileType="header">/usr/include/stdio_ext.h</Path>
+            <Path fileType="header">/usr/include/stdlib.h</Path>
+            <Path fileType="header">/usr/include/string.h</Path>
+            <Path fileType="header">/usr/include/strings.h</Path>
+            <Path fileType="header">/usr/include/sys/auxv.h</Path>
+            <Path fileType="header">/usr/include/sys/cachectl.h</Path>
+            <Path fileType="header">/usr/include/sys/dir.h</Path>
+            <Path fileType="header">/usr/include/sys/endian.h</Path>
+            <Path fileType="header">/usr/include/sys/epoll.h</Path>
+            <Path fileType="header">/usr/include/sys/errno.h</Path>
+            <Path fileType="header">/usr/include/sys/eventfd.h</Path>
+            <Path fileType="header">/usr/include/sys/fcntl.h</Path>
+            <Path fileType="header">/usr/include/sys/file.h</Path>
+            <Path fileType="header">/usr/include/sys/fsuid.h</Path>
+            <Path fileType="header">/usr/include/sys/inotify.h</Path>
+            <Path fileType="header">/usr/include/sys/io.h</Path>
+            <Path fileType="header">/usr/include/sys/ioctl.h</Path>
+            <Path fileType="header">/usr/include/sys/ipc.h</Path>
+            <Path fileType="header">/usr/include/sys/kd.h</Path>
+            <Path fileType="header">/usr/include/sys/klog.h</Path>
+            <Path fileType="header">/usr/include/sys/mman.h</Path>
+            <Path fileType="header">/usr/include/sys/mount.h</Path>
+            <Path fileType="header">/usr/include/sys/msg.h</Path>
+            <Path fileType="header">/usr/include/sys/mtio.h</Path>
+            <Path fileType="header">/usr/include/sys/param.h</Path>
+            <Path fileType="header">/usr/include/sys/personality.h</Path>
+            <Path fileType="header">/usr/include/sys/pidfd.h</Path>
+            <Path fileType="header">/usr/include/sys/poll.h</Path>
+            <Path fileType="header">/usr/include/sys/prctl.h</Path>
+            <Path fileType="header">/usr/include/sys/procfs.h</Path>
+            <Path fileType="header">/usr/include/sys/ptrace.h</Path>
+            <Path fileType="header">/usr/include/sys/queue.h</Path>
+            <Path fileType="header">/usr/include/sys/quota.h</Path>
+            <Path fileType="header">/usr/include/sys/random.h</Path>
+            <Path fileType="header">/usr/include/sys/reboot.h</Path>
+            <Path fileType="header">/usr/include/sys/reg.h</Path>
+            <Path fileType="header">/usr/include/sys/resource.h</Path>
+            <Path fileType="header">/usr/include/sys/select.h</Path>
+            <Path fileType="header">/usr/include/sys/sem.h</Path>
+            <Path fileType="header">/usr/include/sys/sendfile.h</Path>
+            <Path fileType="header">/usr/include/sys/shm.h</Path>
+            <Path fileType="header">/usr/include/sys/signal.h</Path>
+            <Path fileType="header">/usr/include/sys/signalfd.h</Path>
+            <Path fileType="header">/usr/include/sys/socket.h</Path>
+            <Path fileType="header">/usr/include/sys/stat.h</Path>
+            <Path fileType="header">/usr/include/sys/statfs.h</Path>
+            <Path fileType="header">/usr/include/sys/statvfs.h</Path>
+            <Path fileType="header">/usr/include/sys/swap.h</Path>
+            <Path fileType="header">/usr/include/sys/syscall.h</Path>
+            <Path fileType="header">/usr/include/sys/sysinfo.h</Path>
+            <Path fileType="header">/usr/include/sys/syslog.h</Path>
+            <Path fileType="header">/usr/include/sys/sysmacros.h</Path>
+            <Path fileType="header">/usr/include/sys/termios.h</Path>
+            <Path fileType="header">/usr/include/sys/time.h</Path>
+            <Path fileType="header">/usr/include/sys/timeb.h</Path>
+            <Path fileType="header">/usr/include/sys/timerfd.h</Path>
+            <Path fileType="header">/usr/include/sys/times.h</Path>
+            <Path fileType="header">/usr/include/sys/timex.h</Path>
+            <Path fileType="header">/usr/include/sys/ttydefaults.h</Path>
+            <Path fileType="header">/usr/include/sys/types.h</Path>
+            <Path fileType="header">/usr/include/sys/ucontext.h</Path>
+            <Path fileType="header">/usr/include/sys/uio.h</Path>
+            <Path fileType="header">/usr/include/sys/un.h</Path>
+            <Path fileType="header">/usr/include/sys/user.h</Path>
+            <Path fileType="header">/usr/include/sys/utsname.h</Path>
+            <Path fileType="header">/usr/include/sys/vfs.h</Path>
+            <Path fileType="header">/usr/include/sys/vt.h</Path>
+            <Path fileType="header">/usr/include/sys/wait.h</Path>
+            <Path fileType="header">/usr/include/sys/xattr.h</Path>
+            <Path fileType="header">/usr/include/syscall.h</Path>
+            <Path fileType="header">/usr/include/sysexits.h</Path>
+            <Path fileType="header">/usr/include/syslog.h</Path>
+            <Path fileType="header">/usr/include/termios.h</Path>
+            <Path fileType="header">/usr/include/threads.h</Path>
+            <Path fileType="header">/usr/include/time.h</Path>
+            <Path fileType="header">/usr/include/uchar.h</Path>
+            <Path fileType="header">/usr/include/ucontext.h</Path>
+            <Path fileType="header">/usr/include/unistd.h</Path>
+            <Path fileType="header">/usr/include/utime.h</Path>
+            <Path fileType="header">/usr/include/utmp.h</Path>
+            <Path fileType="header">/usr/include/utmpx.h</Path>
+            <Path fileType="header">/usr/include/values.h</Path>
+            <Path fileType="header">/usr/include/wchar.h</Path>
+            <Path fileType="header">/usr/include/wctype.h</Path>
+            <Path fileType="header">/usr/include/wordexp.h</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2026-06-23</Date>
+            <Version>6.3.1</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
+        </Update>
+    </History>
+</PISI>

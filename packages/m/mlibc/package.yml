@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : mlibc
+version    : 6.3.1
+release    : 1
+source     :
+    - https://github.com/managarm/mlibc/archive/refs/tags/v6.3.1.tar.gz : 9236025b32636b2e79cdd00b5914b5e89c3423da257c2db24253e0cac1679444
+    - https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.18.36.tar.xz : fbab86c9f471c81075b280cca30bd85d790c060063a1245859b6344b07c9c44e
+homepage   : https://github.com/managarm/mlibc
+license    : MIT
+component  : programming.library
+summary    :  Portable C standard library
+description: |
+    mlibc is a fully featured C standard library designed with portability in mind.
+libsplit   : false
+networking : true
+clang      : true
+builddeps  :
+    - git
+    - mold
+    - rsync
+patterns   : 
+    - devel : /usr/bin
+setup      : |
+    tar xfv ${sources}/linux-6.18.36.tar.xz
+    pushd linux-6.18.36
+        make headers_install INSTALL_HDR_PATH=$workdir
+    popd
+    %meson_configure -Dlinux_kernel_headers=include -Dld_library_name=mold -Dglibc_option=enabled -Dlinux_option=enabled -Dposix_option=enabled --libdir=%libdir%/mlibc
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+    %install_license LICENSE
