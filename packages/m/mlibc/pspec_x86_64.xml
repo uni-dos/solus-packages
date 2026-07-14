@@ -50,6 +50,7 @@
         <Files>
             <Path fileType="executable">/usr/bin/mlibc-gcc</Path>
             <Path fileType="header">/usr/include/mlibc/abi-bits/access.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/aio.h</Path>
             <Path fileType="header">/usr/include/mlibc/abi-bits/auxv.h</Path>
             <Path fileType="header">/usr/include/mlibc/abi-bits/blkcnt_t.h</Path>
             <Path fileType="header">/usr/include/mlibc/abi-bits/blksize_t.h</Path>
@@ -58,6 +59,7 @@
             <Path fileType="header">/usr/include/mlibc/abi-bits/epoll.h</Path>
             <Path fileType="header">/usr/include/mlibc/abi-bits/errno.h</Path>
             <Path fileType="header">/usr/include/mlibc/abi-bits/fcntl.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/fd_set.h</Path>
             <Path fileType="header">/usr/include/mlibc/abi-bits/fsblkcnt_t.h</Path>
             <Path fileType="header">/usr/include/mlibc/abi-bits/fsfilcnt_t.h</Path>
             <Path fileType="header">/usr/include/mlibc/abi-bits/gid_t.h</Path>
@@ -79,11 +81,17 @@
             <Path fileType="header">/usr/include/mlibc/abi-bits/reboot.h</Path>
             <Path fileType="header">/usr/include/mlibc/abi-bits/resource.h</Path>
             <Path fileType="header">/usr/include/mlibc/abi-bits/rlim_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/route.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/sa_family_t.h</Path>
             <Path fileType="header">/usr/include/mlibc/abi-bits/seek-whence.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/sem.h</Path>
             <Path fileType="header">/usr/include/mlibc/abi-bits/shm.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/sig-limits.h</Path>
             <Path fileType="header">/usr/include/mlibc/abi-bits/sigevent.h</Path>
             <Path fileType="header">/usr/include/mlibc/abi-bits/signal.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/sigset_t.h</Path>
             <Path fileType="header">/usr/include/mlibc/abi-bits/sigval.h</Path>
+            <Path fileType="header">/usr/include/mlibc/abi-bits/sockaddr_storage.h</Path>
             <Path fileType="header">/usr/include/mlibc/abi-bits/socket.h</Path>
             <Path fileType="header">/usr/include/mlibc/abi-bits/socklen_t.h</Path>
             <Path fileType="header">/usr/include/mlibc/abi-bits/stat.h</Path>
@@ -101,17 +109,20 @@
             <Path fileType="header">/usr/include/mlibc/abi-bits/vt.h</Path>
             <Path fileType="header">/usr/include/mlibc/abi-bits/wait.h</Path>
             <Path fileType="header">/usr/include/mlibc/abi-bits/xattr.h</Path>
+            <Path fileType="header">/usr/include/mlibc/aio.h</Path>
             <Path fileType="header">/usr/include/mlibc/alloca.h</Path>
             <Path fileType="header">/usr/include/mlibc/ar.h</Path>
             <Path fileType="header">/usr/include/mlibc/arpa/inet.h</Path>
             <Path fileType="header">/usr/include/mlibc/arpa/nameser.h</Path>
             <Path fileType="header">/usr/include/mlibc/arpa/nameser_compat.h</Path>
+            <Path fileType="header">/usr/include/mlibc/arpa/telnet.h</Path>
             <Path fileType="header">/usr/include/mlibc/assert.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/ansi/clock_t.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/ansi/fenv.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/ansi/time_t.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/ansi/timespec.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/ansi/tm.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/bsd/bsd_stdlib.h</Path>
-            <Path fileType="header">/usr/include/mlibc/bits/bsd/bsd_unistd.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/cpu_set.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/ensure.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/ether_addr.h</Path>
@@ -123,6 +134,7 @@
             <Path fileType="header">/usr/include/mlibc/bits/glibc/glibc_search.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/glibc/glibc_signal.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/glibc/glibc_stdlib.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/glibc/glibc_string.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/inline-definition.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/linux/cpu_set.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/linux/linux_sched.h</Path>
@@ -130,12 +142,13 @@
             <Path fileType="header">/usr/include/mlibc/bits/linux/linux_uio.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/linux/linux_unistd.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/linux/linux_utmp.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/locale-internals.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/locale.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/machine.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/mbstate.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/nl_item.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/null.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/off_t.h</Path>
-            <Path fileType="header">/usr/include/mlibc/bits/posix/fd_set.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/posix/id_t.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/posix/in_addr_t.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/posix/in_port_t.h</Path>
@@ -147,12 +160,15 @@
             <Path fileType="header">/usr/include/mlibc/bits/posix/posix_stdio.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/posix/posix_stdlib.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/posix/posix_string.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/posix/posix_sys_time.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/posix/posix_time.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/posix/posix_wctype.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/posix/pthread_attr_t.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/posix/pthread_t.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/posix/pthread_types.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/posix/stat.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/posix/timer_t.h</Path>
-            <Path fileType="header">/usr/include/mlibc/bits/posix/timeval.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/reclen_t.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/search.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/sigset_t.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/size_t.h</Path>
@@ -160,6 +176,7 @@
             <Path fileType="header">/usr/include/mlibc/bits/syscall.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/syscall_aliases.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/threads.h</Path>
+            <Path fileType="header">/usr/include/mlibc/bits/timeval.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/types.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/wchar.h</Path>
             <Path fileType="header">/usr/include/mlibc/bits/wchar_t.h</Path>
@@ -169,7 +186,9 @@
             <Path fileType="header">/usr/include/mlibc/bits/wint_t.h</Path>
             <Path fileType="header">/usr/include/mlibc/byteswap.h</Path>
             <Path fileType="header">/usr/include/mlibc/complex.h</Path>
+            <Path fileType="header">/usr/include/mlibc/cpio.h</Path>
             <Path fileType="header">/usr/include/mlibc/ctype.h</Path>
+            <Path fileType="header">/usr/include/mlibc/devctl.h</Path>
             <Path fileType="header">/usr/include/mlibc/dirent.h</Path>
             <Path fileType="header">/usr/include/mlibc/dlfcn.h</Path>
             <Path fileType="header">/usr/include/mlibc/elf.h</Path>
@@ -202,6 +221,7 @@
             <Path fileType="header">/usr/include/mlibc/mlibc-config.h</Path>
             <Path fileType="header">/usr/include/mlibc/mntent.h</Path>
             <Path fileType="header">/usr/include/mlibc/module.h</Path>
+            <Path fileType="header">/usr/include/mlibc/monetary.h</Path>
             <Path fileType="header">/usr/include/mlibc/mqueue.h</Path>
             <Path fileType="header">/usr/include/mlibc/net/ethernet.h</Path>
             <Path fileType="header">/usr/include/mlibc/net/if.h</Path>
@@ -317,6 +337,7 @@
             <Path fileType="header">/usr/include/mlibc/syscall.h</Path>
             <Path fileType="header">/usr/include/mlibc/sysexits.h</Path>
             <Path fileType="header">/usr/include/mlibc/syslog.h</Path>
+            <Path fileType="header">/usr/include/mlibc/tar.h</Path>
             <Path fileType="header">/usr/include/mlibc/termios.h</Path>
             <Path fileType="header">/usr/include/mlibc/threads.h</Path>
             <Path fileType="header">/usr/include/mlibc/time.h</Path>
@@ -330,12 +351,13 @@
             <Path fileType="header">/usr/include/mlibc/wchar.h</Path>
             <Path fileType="header">/usr/include/mlibc/wctype.h</Path>
             <Path fileType="header">/usr/include/mlibc/wordexp.h</Path>
+            <Path fileType="header">/usr/include/mlibc/wrappers.h</Path>
         </Files>
     </Package>
     <History>
         <Update release="1">
-            <Date>2026-07-09</Date>
-            <Version>6.3.1</Version>
+            <Date>2026-07-14</Date>
+            <Version>6.4</Version>
             <Comment>Packaging update</Comment>
             <Name>Robert Gonzalez</Name>
             <Email>uni.dos12@outlook.com</Email>

@@ -1,8 +1,8 @@
 diff --git a/meson.build b/meson.build
-index b7f320a6..1baf6941 100644
+index 27d78ab1..eed4c08a 100644
 --- a/meson.build
 +++ b/meson.build
-@@ -436,7 +436,7 @@ configure_file(input: 'mlibc-config.h.in',
+@@ -367,7 +367,7 @@ configure_file(input: 'mlibc-config.h.in',
  	output: 'mlibc-config.h',
  	configuration: mlibc_conf,
  	install: not no_headers,
@@ -11,7 +11,7 @@ index b7f320a6..1baf6941 100644
  
  internal_sources = [
  	'options/internal/generic/allocator.cpp',
-@@ -476,7 +476,8 @@ endif
+@@ -401,7 +401,8 @@ endif
  
  if not no_headers
  	install_headers(
@@ -21,20 +21,20 @@ index b7f320a6..1baf6941 100644
  	)
  
  	if host_machine.cpu_family() == 'riscv64'
-@@ -514,7 +515,7 @@ if not no_headers
+@@ -435,7 +436,7 @@ if not no_headers
+ 		'options/internal/include/bits/winsize.h',
+ 		'options/internal/include/bits/search.h',
  		'options/internal/include/bits/getopt.h',
- 		'options/internal/include/bits/reclen_t.h',
- 		'options/internal/include/bits/timeval.h',
 -		subdir: 'bits'
 +		subdir: 'mlibc/bits'
  	)
  endif
  
 diff --git a/options/ansi/meson.build b/options/ansi/meson.build
-index 6d3b2514..9d854223 100644
+index e57a8d63..6958ce89 100644
 --- a/options/ansi/meson.build
 +++ b/options/ansi/meson.build
-@@ -112,6 +112,7 @@ if not no_headers
+@@ -91,12 +91,13 @@ if not no_headers
  		'include/uchar.h',
  		'include/wchar.h',
  		'include/wctype.h',
@@ -42,30 +42,15 @@ index 6d3b2514..9d854223 100644
  	)
  	install_headers(
  		'include/bits/ansi/timespec.h',
-@@ -119,7 +120,7 @@ if not no_headers
+ 		'include/bits/ansi/time_t.h',
  		'include/bits/ansi/fenv.h',
- 		'include/bits/ansi/clock_t.h',
- 		'include/bits/ansi/tm.h',
 -		subdir: 'bits/ansi'
 +		subdir: 'mlibc/bits/ansi'
  	)
  endif
  
-diff --git a/options/bsd-procdesc/meson.build b/options/bsd-procdesc/meson.build
-index 5df574be..4689fc7f 100644
---- a/options/bsd-procdesc/meson.build
-+++ b/options/bsd-procdesc/meson.build
-@@ -9,7 +9,7 @@ libc_sources += files(
- if not no_headers
- 	install_headers(
- 		'include/sys/procdesc.h',
--		subdir: 'sys'
-+		subdir: 'mlibc/sys'
- 	)
- endif
- 
 diff --git a/options/bsd/meson.build b/options/bsd/meson.build
-index f70e95ae..11cb69fa 100644
+index f3e9fe8f..c48670d5 100644
 --- a/options/bsd/meson.build
 +++ b/options/bsd/meson.build
 @@ -15,23 +15,24 @@ if not no_headers
@@ -77,7 +62,6 @@ index f70e95ae..11cb69fa 100644
  	install_headers(
  		'include/arpa/nameser.h',
  		'include/arpa/nameser_compat.h',
- 		'include/arpa/telnet.h',
 -		subdir: 'arpa'
 +		subdir: 'mlibc/arpa'
  	)
@@ -93,6 +77,7 @@ index f70e95ae..11cb69fa 100644
  	)
  	install_headers(
  		'include/bits/bsd/bsd_stdlib.h',
+ 		'include/bits/bsd/bsd_unistd.h',
 -		subdir: 'bits/bsd'
 +		subdir: 'mlibc/bits/bsd'
  	)
@@ -109,7 +94,7 @@ index b0968014..d7b74067 100644
  	)
  endif
 diff --git a/options/glibc/meson.build b/options/glibc/meson.build
-index 479f0bb1..66fa47ec 100644
+index 8c6fb68d..db215bd7 100644
 --- a/options/glibc/meson.build
 +++ b/options/glibc/meson.build
 @@ -40,7 +40,8 @@ if not no_headers
@@ -158,85 +143,20 @@ index 479f0bb1..66fa47ec 100644
  	)
  	install_headers(
  		'include/bits/glibc/glibc_signal.h',
-@@ -91,7 +92,7 @@ if not no_headers
+@@ -90,7 +91,7 @@ if not no_headers
+ 		'include/bits/glibc/glibc_icmp6.h',
  		'include/bits/glibc/glibc_search.h',
  		'include/bits/glibc/glibc_stdlib.h',
- 		'include/bits/glibc/glibc_string.h',
 -		subdir: 'bits/glibc'
 +		subdir: 'mlibc/bits/glibc'
  	)
  endif
  
-diff --git a/options/linux-epoll/meson.build b/options/linux-epoll/meson.build
-index 9189e0d6..74d8137c 100644
---- a/options/linux-epoll/meson.build
-+++ b/options/linux-epoll/meson.build
-@@ -9,7 +9,7 @@ libc_sources += files(
- if not no_headers
- 	install_headers(
- 		'include/sys/epoll.h',
--		subdir: 'sys'
-+		subdir: 'mlibc/sys'
- 	)
- endif
- 
-diff --git a/options/linux-eventfd/meson.build b/options/linux-eventfd/meson.build
-index 23dcae0b..2bec4b84 100644
---- a/options/linux-eventfd/meson.build
-+++ b/options/linux-eventfd/meson.build
-@@ -9,7 +9,7 @@ libc_sources += files(
- if not no_headers
- 	install_headers(
- 		'include/sys/eventfd.h',
--		subdir: 'sys'
-+		subdir: 'mlibc/sys'
- 	)
- endif
- 
-diff --git a/options/linux-reboot/meson.build b/options/linux-reboot/meson.build
-index adae5c0e..8d2a6beb 100644
---- a/options/linux-reboot/meson.build
-+++ b/options/linux-reboot/meson.build
-@@ -9,7 +9,7 @@ libc_sources += files(
- if not no_headers
- 	install_headers(
- 		'include/sys/reboot.h',
--		subdir: 'sys'
-+		subdir: 'mlibc/sys'
- 	)
- endif
- 
-diff --git a/options/linux-signalfd/meson.build b/options/linux-signalfd/meson.build
-index 2f2577e6..16f62bfc 100644
---- a/options/linux-signalfd/meson.build
-+++ b/options/linux-signalfd/meson.build
-@@ -9,7 +9,7 @@ libc_sources += files(
- if not no_headers
- 	install_headers(
- 		'include/sys/signalfd.h',
--		subdir: 'sys'
-+		subdir: 'mlibc/sys'
- 	)
- endif
- 
-diff --git a/options/linux-timerfd/meson.build b/options/linux-timerfd/meson.build
-index 044c0fe4..8b61cbe1 100644
---- a/options/linux-timerfd/meson.build
-+++ b/options/linux-timerfd/meson.build
-@@ -9,7 +9,7 @@ libc_sources += files(
- if not no_headers
- 	install_headers(
- 		'include/sys/timerfd.h',
--		subdir: 'sys'
-+		subdir: 'mlibc/sys'
- 	)
- endif
- 
 diff --git a/options/linux/meson.build b/options/linux/meson.build
-index b579df5e..de59b043 100644
+index 4fff1f9c..967c2f31 100644
 --- a/options/linux/meson.build
 +++ b/options/linux/meson.build
-@@ -40,6 +40,7 @@ if not no_headers
+@@ -44,6 +44,7 @@ if not no_headers
  		'include/values.h',
  		'include/lastlog.h',
  		'include/module.h',
@@ -244,7 +164,7 @@ index b579df5e..de59b043 100644
  	)
  	install_headers(
  		'include/bits/linux/linux_unistd.h',
-@@ -48,18 +49,18 @@ if not no_headers
+@@ -52,18 +53,18 @@ if not no_headers
  		'include/bits/linux/linux_uio.h',
  		'include/bits/linux/linux_utmp.h',
  		'include/bits/linux/cpu_set.h',
@@ -265,8 +185,8 @@ index b579df5e..de59b043 100644
 +		subdir: 'mlibc/scsi'
  	)
  	install_headers(
- 		'include/sys/inotify.h',
-@@ -79,7 +80,7 @@ if not no_headers
+ 		'include/sys/epoll.h',
+@@ -88,7 +89,7 @@ if not no_headers
  		'include/sys/statfs.h',
  		'include/sys/vfs.h',
  		'include/sys/pidfd.h',
@@ -289,13 +209,13 @@ index 322a912f..dfbb0ec9 100644
  endif
  
 diff --git a/options/posix/meson.build b/options/posix/meson.build
-index 303f8f43..0efbcc52 100644
+index 681c99bc..fc1ce46e 100644
 --- a/options/posix/meson.build
 +++ b/options/posix/meson.build
-@@ -116,15 +116,16 @@ if not no_headers
- 		'include/cpio.h',
- 		'include/monetary.h',
- 		'include/aio.h',
+@@ -105,15 +105,16 @@ if not no_headers
+ 		'include/semaphore.h',
+ 		'include/mqueue.h',
+ 		'include/utmpx.h',
 +		subdir: 'mlibc'
  	)
  	install_headers(
@@ -311,7 +231,7 @@ index 303f8f43..0efbcc52 100644
  	)
  	install_headers(
  		'include/netinet/in.h',
-@@ -135,7 +136,7 @@ if not no_headers
+@@ -124,7 +125,7 @@ if not no_headers
  		'include/netinet/udp.h',
  		'include/netinet/ip6.h',
  		'include/netinet/ip_icmp.h',
@@ -320,7 +240,7 @@ index 303f8f43..0efbcc52 100644
  	)
  	install_headers(
  		'include/sys/fcntl.h',
-@@ -162,7 +163,7 @@ if not no_headers
+@@ -151,7 +152,7 @@ if not no_headers
  		'include/sys/utsname.h',
  		'include/sys/wait.h',
  		'include/sys/syslog.h',
@@ -329,29 +249,29 @@ index 303f8f43..0efbcc52 100644
  	)
  	install_headers(
  		'include/bits/posix/id_t.h',
-@@ -184,7 +185,7 @@ if not no_headers
+@@ -172,7 +173,7 @@ if not no_headers
+ 		'include/bits/posix/fd_set.h',
+ 		'include/bits/posix/pthread_t.h',
  		'include/bits/posix/timer_t.h',
- 		'include/bits/posix/pthread_types.h',
- 		'include/bits/posix/pthread_attr_t.h',
 -		subdir: 'bits/posix'
 +		subdir: 'mlibc/bits/posix'
  	)
  endif
  
 diff --git a/sysdeps/linux/meson.build b/sysdeps/linux/meson.build
-index ecc6c26b..f9f72971 100644
+index 2a71a2bb..840afaf8 100644
 --- a/sysdeps/linux/meson.build
 +++ b/sysdeps/linux/meson.build
-@@ -98,7 +98,7 @@ if not no_headers
- 		'include/abi-bits/sig-limits.h',
- 		'include/abi-bits/sigset_t.h',
- 		'include/abi-bits/aio.h',
+@@ -88,7 +88,7 @@ if not no_headers
+ 		'include/abi-bits/sigevent.h',
+ 		'include/abi-bits/utmpx.h',
+ 		'include/abi-bits/utmp-defines.h',
 -		subdir: 'abi-bits',
 +		subdir: 'mlibc/abi-bits',
  		follow_symlinks: true
  	)
  
-@@ -110,12 +110,12 @@ if not no_headers
+@@ -100,12 +100,12 @@ if not no_headers
  		)
  	endif
  

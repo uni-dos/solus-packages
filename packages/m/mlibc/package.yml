@@ -1,9 +1,9 @@
 # yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : mlibc
-version    : 6.3.1
+version    : 6.4
 release    : 1
 source     :
-    - https://github.com/managarm/mlibc/archive/refs/tags/v6.3.1.tar.gz : 9236025b32636b2e79cdd00b5914b5e89c3423da257c2db24253e0cac1679444
+    - git|https://github.com/managarm/mlibc : 183cf76c407fc017ae7ba82bf4b79e4010ef1920
     - https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.18.36.tar.xz : fbab86c9f471c81075b280cca30bd85d790c060063a1245859b6344b07c9c44e
 homepage   : https://github.com/managarm/mlibc
 license    : MIT
