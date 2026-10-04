@@ -1,0 +1,8 @@
+releases:
+  id: 96779
+  rss: https://github.com/michaelforney/samurai/tags.atom
+# Verify successful cpe hits by visiting https://cve.circl.lu/search?vendor=$VENDOR&product=$PRODUCT
+security:
+  cpe:
+  - vendor: samurai_project
+    product: samurai
