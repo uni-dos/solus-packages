@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : muon
 version    : 0.7.0
-release    : 7
+release    : 8
 source     :
     - https://muon.build/releases/v0.7.0/muon-v0.7.0.tar.gz : 573a3137e2a478e84e71dbbaf874623f7bc9848cf3367c948016ed284e8d637c
 homepage   : https://muon.build/
@@ -13,7 +13,6 @@ description: |
 builddeps  :
     - pkgconfig(libarchive)
     - pkgconfig(libcurl)
-    - pkgconfig(libpkgconf)
     - pkgconfig(scdoc)
     - meson
 rundeps    :
