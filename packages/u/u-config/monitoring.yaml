@@ -1,0 +1,6 @@
+releases:
+  id: ~ # Check https://release-monitoring.org/projects/search/
+  rss: https://github.com/skeeto/u-config/tags.atom
+ # No known CPE, checked 2026-10-20
+security:
+  cpe: ~
